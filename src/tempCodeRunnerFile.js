@@ -1,0 +1,2 @@
+
+      return todoText.includes(searchText);
