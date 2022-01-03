@@ -2,12 +2,6 @@ import React from "react";
 import { AppUI } from "./Modules/AppUI";
 // import './App.css';
 
-// const defaultTodos = [
-//   { text: "Wake up", completed: true },
-//   { text: "Aprender React", completed: true },
-//   { text: "Washar Kimetsu", completed: false },
-// ];
-
 function App() {
   const localStorageTodos = localStorage.getItem("TODOS_V1");
   let parsedTodos;
