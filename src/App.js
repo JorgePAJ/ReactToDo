@@ -27,11 +27,16 @@ function App() {
     });
   }
 
+  function toggle(boolean) {
+    return !boolean;
+  }
+
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodos = [...todos];
-    newTodos[todoIndex].completed = true;
+    newTodos[todoIndex].completed = toggle(newTodos[todoIndex].completed);
     setTodos(newTodos);
+    console.log(todos)
   };
 
   const deleteTodo = (text) => {
@@ -42,15 +47,15 @@ function App() {
   };
 
   return (
-   <AppUI
-   totalTodos={totalTodos} 
-   completedTodos={completedTodos}
-   searchValue={searchValue} 
-   setSearchValue={setSearchValue}
-   searchedTodos = {searchedTodos}
-   completeTodo = {completeTodo}
-   deleteTodo = {deleteTodo}
-   />
+    <AppUI
+      totalTodos={totalTodos}
+      completedTodos={completedTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      completeTodo={completeTodo}
+      deleteTodo={deleteTodo}
+    />
   );
 }
 

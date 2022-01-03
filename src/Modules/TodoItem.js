@@ -7,9 +7,9 @@ function TodoItem(props) {
   //   alert("Ya completaste el todo " + props.text);
   // };
 
-  const onDelete = () => {
-    alert("Borraste el todo " + props.text);
-  };
+  // const onDelete = () => {
+  //   alert("Borraste el todo " + props.text);
+  // };
 
   return (
     <li className="TodoItem">
