@@ -9,20 +9,26 @@ import { TodoContext } from "/Users/jorgeplasencia/ScriptsLocal/Scripts/React/Pl
 function AppUI() {
   return (
     <React.Fragment>
-      <TodoCounter />
+      <TodoContext.Consumer>{(total, completed)=>(
+        <TodoCounter/>
+      )}
+      </TodoContext.Consumer>
       <TodoSearch />
-      <TodoContext.Consumer>
-        {({error,
-        loading,
-        searchedTodos,
-        completeTodo,
-        deleteTodo}) => (
-          <TodoList>
-            {error && <p>Desesperate, hubo un error...</p>}
-            {loading && <p>Estamos cargando, no desesperes...</p>}
-            {!loading && !searchedTodos.length && <p>Crea tu primer TODO!</p>}
 
-            {searchedTodos.map((todo) => (
+      <TodoContext.Consumer>
+        {({
+          error,
+          loading,
+          searchedTodos,
+          completeTodo,
+          deleteTodo,
+        }) => (
+          <TodoList>
+            {error && <p>Desespérate, hubo un error...</p>}
+            {loading && <p>Estamos cargando, no desesperes...</p>}
+            {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+            
+            {searchedTodos.map(todo => (
               <TodoItem
                 key={todo.text}
                 text={todo.text}
@@ -34,6 +40,7 @@ function AppUI() {
           </TodoList>
         )}
       </TodoContext.Consumer>
+
       <CreateTodoButton />
     </React.Fragment>
   );
