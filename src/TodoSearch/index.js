@@ -1,19 +1,20 @@
-import React from "react";
-import "/Users/jorgeplasencia/ScriptsLocal/Scripts/React/Platzi/curso-intro-react/src/Styles/TodoSearch.css";
+import React from 'react';
+import './TodoSearch.css';
 
 function TodoSearch({ searchValue, setSearchValue }) {
   const onSearchValueChange = (event) => {
+    console.log(event.target.value);
     setSearchValue(event.target.value);
   };
 
-  return [
+  return (
     <input
       className="TodoSearch"
-      placeholder="Luisa"
+      placeholder="Cebolla"
       value={searchValue}
       onChange={onSearchValueChange}
-    />,
-  ];
+    />
+  );
 }
 
 export { TodoSearch };

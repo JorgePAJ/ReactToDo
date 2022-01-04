@@ -1,18 +1,15 @@
-import React from "react";
-import { TodoCounter } from "./TodoCounter";
-import { TodoItem } from "./TodoItem";
-import { CreateTodoButton } from "./CreateTodoButton";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoContext } from "/Users/jorgeplasencia/ScriptsLocal/Scripts/React/Platzi/curso-intro-react/src/TodoContext/index.js";
+import React from 'react';
+import { TodoContext } from '../TodoContext';
+import { TodoCounter } from '../TodoCounter';
+import { TodoSearch } from '../TodoSearch';
+import { TodoList } from '../TodoList';
+import { TodoItem } from '../TodoItem';
+import { CreateTodoButton } from '../CreateTodoButton';
 
 function AppUI() {
   return (
     <React.Fragment>
-      <TodoContext.Consumer>{(total, completed)=>(
-        <TodoCounter/>
-      )}
-      </TodoContext.Consumer>
+      <TodoCounter />
       <TodoSearch />
 
       <TodoContext.Consumer>
