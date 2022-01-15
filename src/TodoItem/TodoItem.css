@@ -1,11 +1,11 @@
 .TodoItem {
-  background-color: #FAFAFA;
+  background-color: #BAABDA;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  box-shadow: 0px 5px 50px #D6E5FA;
 }
 
 .TodoItem-p {
@@ -36,7 +36,7 @@
   left: 12px;
 }
 .Icon-check--active {
-  color: #4caf50;
+  color: #D77FA1;
 }
 
 .Icon-delete {
@@ -45,5 +45,5 @@
   right: 0;
 }
 .Icon-delete:hover {
-  color: red;
+  color: #D77FA1;
 }
